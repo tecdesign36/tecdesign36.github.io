@@ -1,0 +1,115 @@
+.title, aside, li, .copyright, #filter {
+	position: relative;
+}
+.edit {
+    position: absolute;
+    top: 20%;
+    left: 80%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 12;
+    overflow: hidden;
+}
+.edit.left {
+	 left: 5%;
+}
+.edit.center {
+     left: 50%;
+}
+.edit.bottom {
+     top: initial;
+     bottom: 20%;
+}
+.edit.background {
+    left: 10%;
+    top: 50%;
+}
+
+.edit .upload-file {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #c4c4c4;
+}
+
+.edit .upload-file:before {
+    content: "";
+    background-image: url(../images/edit.png);
+    background-size: 100%;
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background-repeat: no-repeat;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.edit .upload-file input {
+    font-size: 50px;
+    opacity: 0;
+    width: 100%;
+    cursor: pointer;
+}
+.edit.active .upload-file input {
+    opacity: 1;
+}
+.edit.small .upload-file {
+    width: 30px;
+    height: 30px
+}
+
+.edit.small .upload-file:before {
+    width: 25px;
+    height: 25px
+}
+
+.anim.zoom-in-out {
+    -webkit-animation: zoomWithOrigin 1s alternate infinite ease-in-out;
+    animation: zoomWithOrigin 1s alternate infinite ease-in-out;
+}
+
+input, textarea {
+    color: #222;
+}
+@-webkit-keyframes zoomWithOrigin {
+    0% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomWithOrigin {
+    0% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.cta-buttons {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+    width: 100px;
+}
+
+.cta-buttons .btn {
+    margin: 5px 0;
+}
